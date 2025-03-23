@@ -1,0 +1,18 @@
+pokemon-battle-backend/
+├── controllers/
+│   └── leaderboard.js      # Handles the logic for leaderboard routes
+├── db/
+│   └── index.js            # Manages the MongoDB connection
+├── middleware/
+│   └── auth.js             # (Optional) For authentication middleware
+│   └── error.js            # (Optional) For error handling middleware
+├── models/
+│   └── leaderboard.js      # Defines the Leaderboard schema/model
+├── routers/
+│   └── leaderboard.js      # Defines the routes for leaderboard operations
+├── utils/
+│   └── helpers.js          # (Optional) Utility functions for the API
+├── .env                    # Environment variables (MongoDB URI, PORT, etc.)
+├── index.js                # Main server entry point
+├── package.json            # Project dependencies and scripts
+└── package-lock.json       # Dependency version lock file
