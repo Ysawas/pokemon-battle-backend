@@ -22,3 +22,33 @@ export const createScore = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
+
+// Update a score entry
+export const updateScore = async (req, res) => {
+  try {
+    const updatedScore = await Leaderboard.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (!updatedScore) {
+      return res.status(404).json({ message: 'Score not found' });
+    }
+    res.json(updatedScore);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Delete a score entry
+export const deleteScore = async (req, res) => {
+  try {
+    const deletedScore = await Leaderboard.findByIdAndDelete(req.params.id);
+    if (!deletedScore) {
+      return res.status(404).json({ message: 'Score not found' });
+    }
+    res.json({ message: 'Score deleted' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
