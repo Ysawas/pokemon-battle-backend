@@ -16,3 +16,6 @@ pokemon-battle-backend/
 ├── index.js                # Main server entry point
 ├── package.json            # Project dependencies and scripts
 └── package-lock.json       # Dependency version lock file
+
+
+npm install express mongoose dotenv cors jsonwebtoken

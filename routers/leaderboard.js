@@ -1,4 +1,3 @@
-// routers/leaderboard.js
 import express from 'express';
 import { getLeaderboard, createScore, updateScore, deleteScore } from '../controllers/leaderboard.js';
 import auth from '../middleware/auth.js';
